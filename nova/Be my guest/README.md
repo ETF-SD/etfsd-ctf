@@ -1,4 +1,4 @@
-# ETFSD CTF 2021 – Be my quest
+# ETFSD CTF 2021 – Be my guest
 
 * **Category:** nova
 * **Points:** 50
