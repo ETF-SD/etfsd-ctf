@@ -1,7 +1,7 @@
 # ETFSD CTF 2021 – Be my guest
 
 * **Category:** nova
-* **Points:** 50
+* **Points:** 100
 
 ## Challenge
 
