@@ -13,7 +13,7 @@
 
 ## Solve
 
-> Solve method
+> Spam any character >32 times and hit enter
 
 ```
 etfsd{l0l_3z_pwn}
