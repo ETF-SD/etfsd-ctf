@@ -1,4 +1,4 @@
-# ETFSD CTF 2021 – Chall Name
+# ETFSD CTF 2021 – RRRRRRRRRRRRRRRRR
 
 - **Category:** miscellaneous
 - **Points:** 75
