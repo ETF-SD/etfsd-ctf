@@ -1,18 +1,19 @@
-# ETFSD CTF 2021 – What is my ip?
+# ETFSD CTF 2021 – What is my name?
 * **Category:** nova
 * **Points:** 50
 
 ## Challenge
 
-> Find the nova web server from this wireshark capture.
+> Find the domain name (not ip address) of the nova server from this wireshark capture.
+> Answer Format: etfsd{<domain name>}
 ## Hints
 
-> Hint 1: Look for HTTP requests
+> Hint 1: Look for DNS requests
 
 ## Solve
 
-> In the wireshark capture you will see a request to [hostname] which is the nova server.
+> In the wireshark capture you will a DNS query for the ip address of <domain name>, which is the Nova server.
 
 ```
-[hostname]
+etfsd{<domain name>}
 ```
