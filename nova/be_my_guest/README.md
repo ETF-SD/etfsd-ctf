@@ -5,7 +5,7 @@
 
 ## Challenge
 
-> Access the web server and login with guest credentials
+> The Nova website has been compromised by 7 phantoms and the passwords have been changed. Our cyber operations team collected some data using Wireshark during the attack, their data is located in the PCAP file. See if you can login into the Nova webserver with guest credentials. 
 ## Hints
 
 > Hint 1: Look at the wireshark capture
