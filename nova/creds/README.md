@@ -4,7 +4,7 @@
 
 ## Challenge
 
-> There is an exposed API leaking the admin credentials. Use knowledge of POST requests to find them.
+> Our cyber operations team has learned about an exposed API leaking admin credentials, use this vulnerability to collect the admin credentials and find the flag.
 ## Hints
 
 > Hint 1: Look at inspect element.
