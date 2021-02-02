@@ -5,7 +5,7 @@
 
 ## Challenge
 
-> Traverse the `/` folder to find an executable binary. Find the flag from the binary.
+> Traverse the `/` folder to find an executable binary. Find the flag from the binary.  Username: `etfsd`, Password: `supersafepassword123`, Domain: `PutIPHere`, Port: `1002`
 
 ## Hints
 
