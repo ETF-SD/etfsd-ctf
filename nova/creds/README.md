@@ -4,7 +4,7 @@
 
 ## Challenge
 
-> Our cyber operations team has learned about an exposed API leaking admin credentials, use this vulnerability to login as admin and regain control of Nova. 
+> Our cyber operations team has learned about an exposed API leaking admin credentials, use this vulnerability to collect the admin credentials and find the flag.
 ## Hints
 
 > Hint 1: Look at inspect element.
