@@ -4,7 +4,7 @@
 
 ## Challenge
 
-> Login with the admin credentials to obtain Key 1 for final identity
+> Login with the admin credentials to regain control of nova and obtain Key 1 for final identity
 
 ## Solve
 
