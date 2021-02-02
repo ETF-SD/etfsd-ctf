@@ -30,10 +30,11 @@ int main()
         for (int b = 0; b < 4; b++)
         {
             uint8_t byte = ((temp >> (8 * 3 - (b * 8))) & 0xFF);
-            if ((in[i * 4 + b] == byte))
+            int idx = i * 4 + b;
+            if (in[idx] == byte)
                 printf("%c", byte);
             else
-                death(i * 4 + b);
+                death(idx);
         }
     }
 
