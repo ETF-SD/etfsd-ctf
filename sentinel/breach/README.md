@@ -1,4 +1,4 @@
-# ETFSD CTF 2021 – Exploit
+# ETFSD CTF 2021 – Breach
 
 * **Category:** sentinel
 * **Points:** 50
