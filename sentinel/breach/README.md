@@ -1,4 +1,4 @@
-# ETFSD CTF 2021 – Tunes
+# ETFSD CTF 2021 – Exploit
 
 * **Category:** sentinel
 * **Points:** 50
