@@ -6,7 +6,7 @@
 ## Challenge
 
 > The cyber operations team is requesting that you get a list of the users on the zephyr server.
-> Credentials: Username: `etfsd`, Password: `supersafepassword123`, Domain: `PutIPHere`, Port: `1003`.
+> Credentials: Username: `etfsd`, Password: `supersafepassword123`, Domain: `PutIPHere`, Port: `10003`.
 
 ## Hints
 
