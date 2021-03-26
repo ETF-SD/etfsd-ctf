@@ -1,0 +1,88 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20210325174341
+Username: DESKTOP-HCFCDBH\hoax
+RunAs User: DESKTOP-HCFCDBH\hoax
+Configuration Name: 
+Machine: DESKTOP-HCFCDBH (Microsoft Windows NT 10.0.17763.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 2988
+PSVersion: 5.1.17763.1490
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1490
+BuildVersion: 10.0.17763.1490
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Program Files\Common Files\system\session-7pftp.log
+PS C:\Windows\system32> ftp -n 192.168.11.235
+Connected to 192.168.11.235.
+220 (vsFTPd 3.0.3)
+200 Always in UTF8 mode.
+ftp> quote USER anonymous
+331 Please specify the password.
+ftp> quote PASS anonymous
+230 Login successful.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+cert.pem
+flag.txt
+key.pem
+226 Directory send OK.
+ftp: 32 bytes received in 0.00Seconds 32000.00Kbytes/sec.
+ftp> get flag.txt
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for flag.txt (69 bytes).
+226 Transfer complete.
+ftp: 69 bytes received in 0.00Seconds 69000.00Kbytes/sec.
+ftp> quit
+221 Goodbye.
+PS C:\Windows\system32> cat flag.txt
+e
+
+t
+
+f
+
+s
+
+d
+
+{
+
+l0g_me_h3r3_
+
+l0g_m3_th3r3_
+
+l0g_m3_3v3rywh3r3
+
+}
+
+PS C:\Windows\system32> Remove-Item flag.txt
+PS C:\Windows\system32> ftp -n 192.168.11.235
+Connected to 192.168.11.235.
+220 (vsFTPd 3.0.3)
+200 Always in UTF8 mode.
+ftp> quote USER anonymous
+331 Please specify the password.
+ftp> quote PASS anonymous
+230 Login successful.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+cert.pem
+flag.txt
+key.pem
+226 Directory send OK.
+ftp: 32 bytes received in 0.00Seconds 32000.00Kbytes/sec.
+ftp> get key.pem
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for key.pem (3762 bytes).
+226 Transfer complete.
+ftp: 3762 bytes received in 0.00Seconds 3762000.00Kbytes/sec.
+ftp> quit
+221 Goodbye.
+PS C:\Windows\system32> Move-Item -Path key.pem -Destination C:\Windows\Branding\key.pem
