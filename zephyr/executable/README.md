@@ -6,7 +6,7 @@
 ## Challenge
 
 > The cyber operations team believes that the 7 phantoms have placed a malicious executable on the zephyr system, find the executable and capture the flag. 
-> Credentials: Username: `etfsd`, Password: `supersafepassword123`, Domain: `PutIPHere`, Port: `1002`
+> Credentials: Username: `etfsd`, Password: `supersafepassword123`, Domain: `PutIPHere`, Port: `10002`
 
 ## Hints
 
