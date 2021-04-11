@@ -1,42 +1,47 @@
-#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-char in[20];
-void death(int i)
-{
-    if (i + 1 != sizeof(in) / sizeof(&in))
-    {
-        printf("\nuh yeah not it\n");
-        exit(1);
-    }
+#define LEN(arr) (sizeof(arr) / sizeof(*arr))
+#define __(c) (c + 0x69)
+#define ___(p)          \
+  do {                  \
+    char* c = (char*)p; \
+    while (*c) {        \
+      *c++ -= 0x69;     \
+    }                   \
+  } while (0)
+
+char f[] = {__('e'), __('t'), __('f'), __('s'), __('d'), __('{'),
+            __('l'), __('0'), __('l'), __('_'), __('g'), __('0'),
+            __('_'), __('@'), __('w'), __('@'), __('y'), __('}')};
+
+void w() {
+  ___(f);
+  printf("nice! here's your flag: %s\n", f);
 }
 
-int main()
-{
-    scanf("%s", in);
+int main() {
+  int y = -2033218866;
+  int l = -828337715;
+  int v = -1983083102;
+  int f = -1714515560;
+  int u = -1601464374;
+  int s = -889192454;
 
-    uint32_t _null = (~0x65746673) ^ 1;
-    uint32_t __nullptr = (~0x647b6c30) ^ 2;
-    uint32_t __nullerptr = (~0x6c5f6730) ^ 3;
-    uint32_t __nullestptr = (~0x5f407740) ^ 4;
-    uint32_t __pp_ptr = (~0x797d0000) ^ 5;
-    uint32_t __gcc_intrinsic[] = {_null, __nullptr, __nullerptr, __nullestptr, __pp_ptr};
+  char k[64];
+  scanf("%64s", k);
 
-    for (int i = 0; i < 5; i++)
-    {
-        uint32_t lolz = __gcc_intrinsic[i] ^ (i + 1);
-        uint32_t temp = ~(*(uint32_t *)(uint64_t *)&lolz);
-        for (int b = 0; b < 4; b++)
-        {
-            uint8_t byte = ((temp >> (8 * 3 - (b * 8))) & 0xFF);
-            int idx = i * 4 + b;
-            if (in[idx] == byte)
-                printf("%c", byte);
-            else
-                death(idx);
-        }
+  int _[] = {y, l, v, f, u, s};
+  for (int i = 0; i < LEN(_); i++) {
+    int t = ~(_[i] ^ i);
+    for (int b = 0; b < sizeof(t); b++) {
+      char z = (t >> (8 * (3 - b))) & 0xFF;
+      if (k[i * 4 + b] != z) {
+        printf("lol no try again\n");
+        return EXIT_FAILURE;
+      }
     }
+  }
 
-    printf("\nyep!\n");
+  w();
 }

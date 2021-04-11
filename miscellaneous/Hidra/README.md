@@ -13,7 +13,7 @@
 
 ## Solve
 
-> just walk through the code lol
+> rev lol. the password is `y0u11_n3v3r_f1nd_th15`.
 
 ```
 etfsd{l0l_g0_@w@y}
