@@ -12,8 +12,8 @@
 
 ## Solve
 
-> In the wireshark capture you will a DNS query for the ip address of <domain name>, which is the Nova server.
+> In the wireshark capture, if you look at the "Host" header of any of the HTTP requests, you will see it points to 646162616279.etfsd.org
 
 ```
-etfsd{<domain name>}
+etfsd{646162616279.etfsd.org}
 ```
