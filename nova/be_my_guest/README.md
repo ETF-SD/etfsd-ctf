@@ -12,8 +12,7 @@
 
 ## Solve
 
-> Double click on the packet which contains a POST request to the webserver. If you open the ``application/x-www-form-encoded`` tab (which contains the data sent by the html form)  you will see the guest username and password.
-
+> Double click on the packet which contains a POST request to the webserver. If you open the ``application/x-www-form-encoded`` tab (which contains the data sent by the html form)  you will see the guest username and password. Note: Some of the HTTP requests have incorrect credentials
 ```
 etfsd{gu35t_329941267154}
 ```
