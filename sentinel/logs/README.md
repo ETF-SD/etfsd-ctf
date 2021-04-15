@@ -5,9 +5,9 @@
 
 ## Challenge
 
-> Hoax apparently had a 7 Phantoms FTP server setup on his local network a few months ago that had some important files. For a small price he was persuaded to give us the file name of one of his Powershell log files. Check it out for anything suspicious
+> Hoax apparently had a 7 Phantoms FTP server setup on his local network a few months ago that had some important files. For a small price he was persuaded to give us the file path of one of his Powershell log files. Check it out for anything suspicious
 
-File Name: `session-7pftp.log`
+File Path: `C:\Program Files\Common Files\system\session-7pftp.log`
 
 ## Hints
 
