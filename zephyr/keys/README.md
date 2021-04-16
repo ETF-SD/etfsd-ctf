@@ -17,5 +17,5 @@
 > Use the private key given and ssh into the server. Then cat the .flag.tech file.
 
 ```
-etfsd{D3c0d!NG_0n_P0!nT}
+etfsd{Y0u_f0UnD$_tH3_K3Y$}
 ```
