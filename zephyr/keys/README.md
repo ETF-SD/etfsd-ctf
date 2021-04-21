@@ -5,8 +5,8 @@
 
 ## Challenge
 
-> The cyber operations team believes that the 7 phantoms have placed a malicious executable on the zephyr system, find the executable and capture the flag.
-> Credentials: Username: `etfsd`, Password: `supersafepassword123`, Domain: `PutIPHere`, Port: `10005`
+> The Cyber Operations team managed to find a 7 phantoms public key stashed in another compromised ETF server? Can you use it to log into Zephyr?
+> Credentials: Username: `etfsd`, Domain: `PutIPHere`, Port: `10005`
 
 ## Hints
 
