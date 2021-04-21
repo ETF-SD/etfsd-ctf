@@ -17,5 +17,5 @@
 > Run the binary and decode using binary to string converter
 
 ```
-etfsd{D3c0d!NG_0n_P0!nT}
+etfsd{3nC0d!nG_0n_P0!nT}
 ```
