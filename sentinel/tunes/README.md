@@ -1,7 +1,7 @@
 # ETFSD CTF 2021 – Tunes
 
 * **Category:** sentinel
-* **Points:** 175
+* **Points:** 100
 
 ## Challenge
 

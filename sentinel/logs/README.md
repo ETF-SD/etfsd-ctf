@@ -1,7 +1,7 @@
 # ETFSD CTF 2021 – Logs
 
 * **Category:** sentinel
-* **Points:** 75
+* **Points:** 100
 
 ## Challenge
 

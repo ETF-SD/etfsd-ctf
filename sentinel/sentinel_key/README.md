@@ -1,7 +1,7 @@
 # ETFSD CTF 2021 – Sentinel_key
 
 * **Category:** sentinel
-* **Points:** 50
+* **Points:** 100
 
 ## Challenge
 
