@@ -1,4 +1,4 @@
-# ETFSD CTF 2021 – Binme
+# ETFSD CTF 2021 – Xe
 
 - **Category:** miscellaneous
 - **Points:** 50
