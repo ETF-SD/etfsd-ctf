@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <style>
+        #divContent {
+            width: 400px;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #listEnd {
+            width: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .item {
+            width: 300px;
+            height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Scroll to the bottom for the flag.</h1>
+    </center>
+    
+    <div id='divContent'>
+
+    </div>
+
+    <div id='listEnd'>
+        <p>lol nope</p>
+    </div>
+
+    <script>
+        let divContent = document.getElementById('divContent');
+        let listEnd = document.getElementById('listEnd');
+        let itemCount = 0;
+        let appending = false;
+
+        window.addEventListener('DOMContentLoaded', load);
+
+        function load() {
+            addItems();
+        }
+
+        function addItems() {
+            appending = true;
+            for (let i = 0; i < 20 ; i++) {
+                let item = generateDataBlock(['keep scrolling'])
+                divContent.appendChild(item);
+                itemCount++;
+            }
+            appending = false;
+        }
+
+        function generateDataBlock(message) {
+            let item = document.createElement('div');
+            item.setAttribute('class', 'item');
+            item.textContent = message;
+            return item;
+        }
+
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1.0,
+        };
+
+        let callback = (entries, observer)=> {
+            entries.forEach(entry => {
+                if (entry.target.id === 'listEnd') {
+                    if (entry.isIntersecting && !appending) {
+                        appending = true;
+                        addItems();
+                    }
+                }
+            });
+        };
+        let observer = new IntersectionObserver(callback, options);
+        observer.observe(listEnd);
+
+    </script>
+</body>
+</html>
+
+<!-- 
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                         dddddddd     {{{{{                                                                      dddddddd                                                                                                                                                                                                                                                            }}}}}      
+                             tttt             ffffffffffffffff                           d::::::d    {::::{                         000000000          000000000                 d::::::d                                    jjjj      000000000             66666666                           555555555555555555                                              000000000       1111111     1111111     1111111                                      }::::}     
+                          ttt:::t            f::::::::::::::::f                          d::::::d   {:::::{                       00:::::::::00      00:::::::::00               d::::::d                                   j::::j   00:::::::::00          6::::::6                            5::::::::::::::::5                                            00:::::::::00    1::::::1    1::::::1    1::::::1                                      }:::::}    
+                          t:::::t           f::::::::::::::::::f                         d::::::d   {::::{{                     00:::::::::::::00  00:::::::::::::00             d::::::d                                    jjjj  00:::::::::::::00       6::::::6                             5::::::::::::::::5                                          00:::::::::::::00 1:::::::1   1:::::::1   1:::::::1                                      }}::::}    
+                          t:::::t           f::::::fffffff:::::f                         d:::::d   {::::{                      0:::::::000:::::::00:::::::000:::::::0            d:::::d                                          0:::::::000:::::::0     6::::::6                              5:::::555555555555                                         0:::::::000:::::::0111:::::1   111:::::1   111:::::1                                        }::::}   
+    eeeeeeeeeeee    ttttttt:::::ttttttt     f:::::f       ffffffssssssssss       ddddddddd:::::d   {::::{     ggggggggg   ggggg0::::::0   0::::::00::::::0   0::::::0    ddddddddd:::::d                                   jjjjjjj0::::::0   0::::::0    6::::::6                               5:::::5                ccccccccccccccccrrrrr   rrrrrrrrr   0::::::0   0::::::0   1::::1      1::::1      1::::1 nnnn  nnnnnnnn       ggggggggg   ggggg }::::}   
+  ee::::::::::::ee  t:::::::::::::::::t     f:::::f           ss::::::::::s    dd::::::::::::::d  {:::::{    g:::::::::ggg::::g0:::::0     0:::::00:::::0     0:::::0  dd::::::::::::::d                                   j:::::j0:::::0     0:::::0   6::::::6                                5:::::5              cc:::::::::::::::cr::::rrr:::::::::r  0:::::0     0:::::0   1::::1      1::::1      1::::1 n:::nn::::::::nn    g:::::::::ggg::::g }:::::}  
+ e::::::eeeee:::::eet:::::::::::::::::t    f:::::::ffffff   ss:::::::::::::s  d::::::::::::::::d {:::::{    g:::::::::::::::::g0:::::0     0:::::00:::::0     0:::::0 d::::::::::::::::d                                    j::::j0:::::0     0:::::0  6::::::6                                 5:::::5555555555    c:::::::::::::::::cr:::::::::::::::::r 0:::::0     0:::::0   1::::1      1::::1      1::::1 n::::::::::::::nn  g:::::::::::::::::g  }:::::} 
+e::::::e     e:::::etttttt:::::::tttttt    f::::::::::::f   s::::::ssss:::::sd:::::::ddddd:::::d{:::::{    g::::::ggggg::::::gg0:::::0 000 0:::::00:::::0 000 0:::::0d:::::::ddddd:::::d                                    j::::j0:::::0 000 0:::::0 6::::::::66666                            5:::::::::::::::5  c:::::::cccccc:::::crr::::::rrrrr::::::r0:::::0 000 0:::::0   1::::l      1::::l      1::::l nn:::::::::::::::ng::::::ggggg::::::gg   }:::::}
+e:::::::eeeee::::::e      t:::::t          f::::::::::::f    s:::::s  ssssss d::::::d    d:::::d {:::::{   g:::::g     g:::::g 0:::::0 000 0:::::00:::::0 000 0:::::0d::::::d    d:::::d                                    j::::j0:::::0 000 0:::::06::::::::::::::66                          555555555555:::::5 c::::::c     ccccccc r:::::r     r:::::r0:::::0 000 0:::::0   1::::l      1::::l      1::::l   n:::::nnnn:::::ng:::::g     g:::::g   }:::::} 
+e:::::::::::::::::e       t:::::t          f:::::::ffffff      s::::::s      d:::::d     d:::::d  {:::::{  g:::::g     g:::::g 0:::::0     0:::::00:::::0     0:::::0d:::::d     d:::::d                                    j::::j0:::::0     0:::::06::::::66666:::::6                                     5:::::5c:::::c              r:::::r     rrrrrrr0:::::0     0:::::0   1::::l      1::::l      1::::l   n::::n    n::::ng:::::g     g:::::g  }:::::}  
+e::::::eeeeeeeeeee        t:::::t           f:::::f               s::::::s   d:::::d     d:::::d   {::::{  g:::::g     g:::::g 0:::::0     0:::::00:::::0     0:::::0d:::::d     d:::::d                                    j::::j0:::::0     0:::::06:::::6     6:::::6                                    5:::::5c:::::c              r:::::r            0:::::0     0:::::0   1::::l      1::::l      1::::l   n::::n    n::::ng:::::g     g:::::g  }::::}   
+e:::::::e                 t:::::t    tttttt f:::::f         ssssss   s:::::s d:::::d     d:::::d   {::::{  g::::::g    g:::::g 0::::::0   0::::::00::::::0   0::::::0d:::::d     d:::::d                                    j::::j0::::::0   0::::::06:::::6     6:::::6                        5555555     5:::::5c::::::c     ccccccc r:::::r            0::::::0   0::::::0   1::::l      1::::l      1::::l   n::::n    n::::ng::::::g    g:::::g  }::::}   
+e::::::::e                t::::::tttt:::::tf:::::::f        s:::::ssss::::::sd::::::ddddd::::::dd  {:::::{{g:::::::ggggg:::::g 0:::::::000:::::::00:::::::000:::::::0d::::::ddddd::::::dd                                   j::::j0:::::::000:::::::06::::::66666::::::6                        5::::::55555::::::5c:::::::cccccc:::::c r:::::r            0:::::::000:::::::0111::::::111111::::::111111::::::111n::::n    n::::ng:::::::ggggg:::::g}}:::::}   
+ e::::::::eeeeeeee        tt::::::::::::::tf:::::::f        s::::::::::::::s  d:::::::::::::::::d   {:::::{ g::::::::::::::::g  00:::::::::::::00  00:::::::::::::00  d:::::::::::::::::d                                   j::::j 00:::::::::::::00  66:::::::::::::66                          55:::::::::::::55  c:::::::::::::::::c r:::::r             00:::::::::::::00 1::::::::::11::::::::::11::::::::::1n::::n    n::::n g::::::::::::::::g}:::::}    
+  ee:::::::::::::e          tt:::::::::::ttf:::::::f         s:::::::::::ss    d:::::::::ddd::::d    {::::{  gg::::::::::::::g    00:::::::::00      00:::::::::00     d:::::::::ddd::::d                                   j::::j   00:::::::::00      66:::::::::66                              55:::::::::55     cc:::::::::::::::c r:::::r               00:::::::::00   1::::::::::11::::::::::11::::::::::1n::::n    n::::n  gg::::::::::::::g}::::}     
+    eeeeeeeeeeeeee            ttttttttttt  fffffffff          sssssssssss       ddddddddd   ddddd     {{{{{    gggggggg::::::g      000000000          000000000        ddddddddd   ddddd                                   j::::j     000000000          666666666                                  555555555         cccccccccccccccc rrrrrrr                 000000000     111111111111111111111111111111111111nnnnnn    nnnnnn    gggggggg::::::g}}}}}      
+                                                                                                                       g:::::g                                                           ________________________           j::::j                                      ________________________                                                                                                                                              g:::::g           
+                                                                                                           gggggg      g:::::g                                                           _::::::::::::::::::::::_ jjjj      j::::j                                      _::::::::::::::::::::::_                                                                                                                                  gggggg      g:::::g           
+                                                                                                           g:::::gg   gg:::::g                                                           ________________________j::::jj   j:::::j                                      ________________________                                                                                                                                  g:::::gg   gg:::::g           
+                                                                                                            g::::::ggg:::::::g                                                                                   j::::::jjj::::::j                                                                                                                                                                                                 g::::::ggg:::::::g           
+                                                                                                             gg:::::::::::::g                                                                                     jj::::::::::::j                                                                                                                                                                                                   gg:::::::::::::g            
+                                                                                                               ggg::::::ggg                                                                                         jjj::::::jjj                                                                                                                                                                                                      ggg::::::ggg              
+                                                                                                                  gggggg                                                                                               jjjjjj                                                                                                                                                                                                            gggggg                 
+-->
